@@ -1,0 +1,8 @@
+La aplicación trata de una plataforma web hecha con react y js. Será una aplicación para gestionar un almacén. Cuenta con un panel con un botón para añadir producto, buscar producto y
+eliminar producto.
+
+La aplicación tendrá dos pestañas, un formulario para rellenar el producto que quieres meter, y tres botones, uno para buscar, otro para eliminar y otro para añadir. En el caso de que
+se busque un producto vacio, se mostrarán los 10 primeros productos; si se envia un producto vacio, mostrará un error; si se elimina un producto vacio, aparecerá un error o directamente
+no se dirá nada al usuario ya que no eliminará nada.
+
+

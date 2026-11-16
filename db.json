@@ -1,0 +1,85 @@
+
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Arroz basmati",
+      "categoria": "Comida",
+      "precio": 2.99,
+      "stock": 45,
+      "descripcion": "Paquete de arroz basmati de 1 kg"
+    },
+    {
+      "id": 2,
+      "nombre": "Aceite de oliva",
+      "categoria": "Comida",
+      "precio": 8.50,
+      "stock": 20,
+      "descripcion": "Botella de aceite de oliva virgen extra de 1 litro"
+    },
+    {
+      "id": 3,
+      "nombre": "Chocolate negro",
+      "categoria": "Comida",
+      "precio": 3.25,
+      "stock": 0,
+      "descripcion": "Tableta de chocolate negro 85% cacao"
+    },
+    {
+      "id": 4,
+      "nombre": "Auriculares Bluetooth",
+      "categoria": "Electrónica",
+      "precio": 49.99,
+      "stock": 15,
+      "descripcion": "Auriculares inalámbricos con cancelación de ruido"
+    },
+    {
+      "id": 5,
+      "nombre": "Teclado mecánico",
+      "categoria": "Electrónica",
+      "precio": 69.90,
+      "stock": 8,
+      "descripcion": "Teclado mecánico RGB con conexión USB"
+    },
+    {
+      "id": 6,
+      "nombre": "Altavoz portátil",
+      "categoria": "Electrónica",
+      "precio": 35.00,
+      "stock": 12,
+      "descripcion": "Altavoz Bluetooth resistente al agua"
+    },
+    {
+      "id": 7,
+      "nombre": "Camiseta básica",
+      "categoria": "Ropa",
+      "precio": 14.99,
+      "stock": 30,
+      "descripcion": "Camiseta de algodón 100%"
+    },
+    {
+      "id": 8,
+      "nombre": "Sudadera negra",
+      "categoria": "Ropa",
+      "precio": 34.99,
+      "stock": 0,
+      "descripcion": "Sudadera de algodón con capucha"
+    },
+    {
+      "id": 9,
+      "nombre": "Zapatillas deportivas",
+      "categoria": "Ropa",
+      "precio": 59.99,
+      "stock": 6,
+      "descripcion": "Zapatillas deportivas para uso diario"
+    },
+    {
+      "id": 10,
+      "nombre": "Pantalón vaquero",
+      "categoria": "Ropa",
+      "precio": 39.99,
+      "stock": 18,
+      "descripcion": "Pantalón vaquero de corte recto"
+    }
+  ]
+}

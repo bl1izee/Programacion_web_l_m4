@@ -1,16 +1,37 @@
-# React + Vite
+# Porgramacion_web_l_m2
+Misión M3
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Esta aplicación web simula una gestión de almacenes, donde tienes la capcidad de subir productos, buscar productos y eliminar productos. 
+Usa como simulación de bases de datos json-server, que almacena en formato json información que querramos. En este caso tenemos creado solo el endpoint de productos.
+Para gestionar las api, usa  Tanstack query v5, que agrega aparte una capa caché para no tener que estar consultado en todo momento datos de la "bases de datos".
 
-Currently, two official plugins are available:
+## Cómo probarlo
+1. Clona el repositorio
+2. Instala las dependencias con:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+```
 
-## React Compiler
+3. Arranca el servidor de la api
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npx json-server db.json
+```
 
-## Expanding the Oxlint configuration
+4. Arranca el servidor de Vite:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```bash
+npm run dev
+```
+
+5. Abre la página por el puerto local que te proporciona
+
+## Uso de IA
+Se ha utilizado ChatGPT como apoyo para resolver dudas, analizar errores y 
+revisar posibles mejoras. Las propuestas se revisan y prueban antes de 
+incorporarlas al proyecto.
+Hice uso de la IA para ayudarme a crear las consultas a la api con Tanstack query, y a que es una tecnología nueva para mí. Le pedí ayuda a la hora de como poder hacer una consulta POST y DELETE con Tanstack query.
+
+## Autopsia 
+1. Tuve que tomar la decisión de como hacer la petición GET. Al principio empecé usando un useEffect que se ejecutase cuando buscarProducto cambiase, pero al final vi que en Tanstack Query al poner que la queryKey es buscarProducto, cuando se renderiza el componente identifica que ha cambiado la queryKey y lanza una nueva petición GET.

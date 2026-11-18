@@ -1,8 +1,7 @@
-
 {
   "productos": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "Arroz basmati",
       "categoria": "Comida",
       "precio": 2.99,
@@ -10,15 +9,15 @@
       "descripcion": "Paquete de arroz basmati de 1 kg"
     },
     {
-      "id": 2,
+      "id": "2",
       "nombre": "Aceite de oliva",
       "categoria": "Comida",
-      "precio": 8.50,
+      "precio": 8.5,
       "stock": 20,
       "descripcion": "Botella de aceite de oliva virgen extra de 1 litro"
     },
     {
-      "id": 3,
+      "id": "3",
       "nombre": "Chocolate negro",
       "categoria": "Comida",
       "precio": 3.25,
@@ -26,7 +25,7 @@
       "descripcion": "Tableta de chocolate negro 85% cacao"
     },
     {
-      "id": 4,
+      "id": "4",
       "nombre": "Auriculares Bluetooth",
       "categoria": "Electrónica",
       "precio": 49.99,
@@ -34,23 +33,23 @@
       "descripcion": "Auriculares inalámbricos con cancelación de ruido"
     },
     {
-      "id": 5,
+      "id": "5",
       "nombre": "Teclado mecánico",
       "categoria": "Electrónica",
-      "precio": 69.90,
+      "precio": 69.9,
       "stock": 8,
       "descripcion": "Teclado mecánico RGB con conexión USB"
     },
     {
-      "id": 6,
+      "id": "6",
       "nombre": "Altavoz portátil",
       "categoria": "Electrónica",
-      "precio": 35.00,
+      "precio": 35,
       "stock": 12,
       "descripcion": "Altavoz Bluetooth resistente al agua"
     },
     {
-      "id": 7,
+      "id": "7",
       "nombre": "Camiseta básica",
       "categoria": "Ropa",
       "precio": 14.99,
@@ -58,7 +57,7 @@
       "descripcion": "Camiseta de algodón 100%"
     },
     {
-      "id": 8,
+      "id": "8",
       "nombre": "Sudadera negra",
       "categoria": "Ropa",
       "precio": 34.99,
@@ -66,7 +65,7 @@
       "descripcion": "Sudadera de algodón con capucha"
     },
     {
-      "id": 9,
+      "id": "9",
       "nombre": "Zapatillas deportivas",
       "categoria": "Ropa",
       "precio": 59.99,
@@ -74,12 +73,13 @@
       "descripcion": "Zapatillas deportivas para uso diario"
     },
     {
-      "id": 10,
+      "id": "10",
       "nombre": "Pantalón vaquero",
       "categoria": "Ropa",
       "precio": 39.99,
       "stock": 18,
       "descripcion": "Pantalón vaquero de corte recto"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

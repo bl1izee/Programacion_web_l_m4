@@ -3,7 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 
 const esquema = z.object({
-  nombre: z.string().min(4, "El nombre es demasiado corto"),
+  nombre: z.string(),
 });
 
 export default function FormularioBuscar({cambiarProducto}){
@@ -12,9 +12,8 @@ export default function FormularioBuscar({cambiarProducto}){
         defaultValues: { nombre: "" },
     });
 
-    function onSubmit(producto){ 
-        console.log("Buscando producto: ", producto);
-        cambiarProducto(producto);
+    function onSubmit(data){ 
+        cambiarProducto(data.nombre);
         reset();
     }
 

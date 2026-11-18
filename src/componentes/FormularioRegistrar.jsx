@@ -5,20 +5,19 @@ import { z } from "zod";
 const esquema = z.object({
   nombre: z.string().min(4, "El nombre es demasiado corto"),
   categoria: z.string().min(1, "Ingresa una categoría"),
-  precio: z.coerce.number().min(18, "Precio no válido"),
+  precio: z.coerce.number(),
   stock: z.coerce.number().int().min(0, "Stock no válido"),
   descripcion: z.string(),
 });
 
-export default function FormularioRegistrar({cambiarProducto}){
+export default function FormularioRegistrar({functRegistrarProducto}){
     const { reset, register, handleSubmit, formState: { errors, isSubmitting } } = useForm({
         resolver: zodResolver(esquema),           // 👈 validamos con Zod
         defaultValues: { nombre: "", categoria: "" , precio: "", stock: "", descripcion: ""   },
     });
 
     function onSubmit(producto){ 
-        console.log("Registrando producto: ", producto); 
-        cambiarProducto(producto);
+        functRegistrarProducto(producto);
         reset();
     }
 

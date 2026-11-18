@@ -12,13 +12,8 @@ export default function FormularioBorrar({functBorrarProducto}){
         defaultValues: { nombre: "" },
     });
 
-    async function onSubmit(producto){
-        try {
-          await functBorrarProducto(producto);
-        } catch (error) {
-          console.error('Ocurrió un error:', error);
-        }
-
+    async function onSubmit(data){
+        functBorrarProducto.mutate(data.nombre);
         reset();
     }
 

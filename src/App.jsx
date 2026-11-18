@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import BoxConsultar from './componentes/BoxConsultar';
 import { buscarProductoFunction, borrarProducto, crearProducto } from './componentes/scripts/queries';
-
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 
 function App() {

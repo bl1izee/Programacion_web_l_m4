@@ -1,6 +1,4 @@
-# Porgramacion_web_l_m2
-Misión M3
-
+# Porgramacion_web_l_m4
 Esta aplicación web simula una gestión de almacenes, donde tienes la capcidad de subir productos, buscar productos y eliminar productos. 
 Usa como simulación de bases de datos json-server, que almacena en formato json información que querramos. En este caso tenemos creado solo el endpoint de productos.
 Para gestionar las api, usa  Tanstack query v5, que agrega aparte una capa caché para no tener que estar consultado en todo momento datos de la "bases de datos".

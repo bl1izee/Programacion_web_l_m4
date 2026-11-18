@@ -5,14 +5,12 @@ export async function crearProducto(producto) {
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(producto)
+        body: JSON.stringify(producto) // Convertimos el JSON en un string (es único tipo que guarda la caché)
     });
 
     if (!respuesta.ok) {
         throw new Error("Error al crear el producto");
     }
-
-    return await respuesta.json();
 }
 
 // Función que borra un producto por nombre
@@ -45,6 +43,7 @@ export async function borrarProducto(nombre) {
 export async function buscarProductoFunction(nombre) {
   let respuesta;
 
+  // Si el nombre está vacío, es una consulta general a todos los productos
   if(nombre === ""){
     respuesta = await fetch(
       `http://localhost:3000/productos`
@@ -53,7 +52,7 @@ export async function buscarProductoFunction(nombre) {
   else{
     {
     respuesta = await fetch(
-      `http://localhost:3000/productos?nombre=${encodeURIComponent(nombre)}`
+      `http://localhost:3000/productos?nombre=${encodeURIComponent(nombre)}` // URL encodeamos el nombre
     );
   }
   }
@@ -62,7 +61,8 @@ export async function buscarProductoFunction(nombre) {
     throw new Error("Error al buscar el producto");
   }
 
-  const datos = await respuesta.json();
+  // Los datos los pasamos a formato JSON
+  const datos = await respuesta.json(); 
 
   return datos;
 }

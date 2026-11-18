@@ -2,13 +2,14 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 
+// Esquema del formulario con zod
 const esquema = z.object({
   nombre: z.string(),
 });
 
 export default function FormularioBuscar({cambiarProducto}){
     const { reset, register, handleSubmit, formState: { errors, isSubmitting } } = useForm({
-        resolver: zodResolver(esquema),           // 👈 validamos con Zod
+        resolver: zodResolver(esquema), // validamos con Zod
         defaultValues: { nombre: "" },
     });
 
@@ -22,7 +23,7 @@ export default function FormularioBuscar({cambiarProducto}){
       <label>Nombre <input {...register("nombre")} /></label>
       {errors.nombre && <p className="error">{errors.nombre.message}</p>}
 
-      <button disabled={isSubmitting}>{isSubmitting ? "Registrando…" : "Buscar producto"}</button>
+      <button disabled={isSubmitting}>{"Buscar producto"}</button>
     </form>
   )
 }

@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 
+// Esquema del formulario con zod
 const esquema = z.object({
   nombre: z.string().min(4, "El nombre es demasiado corto"),
   categoria: z.string().min(1, "Ingresa una categoría"),
@@ -12,12 +13,12 @@ const esquema = z.object({
 
 export default function FormularioRegistrar({functRegistrarProducto}){
     const { reset, register, handleSubmit, formState: { errors, isSubmitting } } = useForm({
-        resolver: zodResolver(esquema),           // 👈 validamos con Zod
-        defaultValues: { nombre: "", categoria: "" , precio: "", stock: "", descripcion: ""   },
+        resolver: zodResolver(esquema), // validamos con Zod
+        defaultValues: { nombre: "", categoria: "" , precio: "", stock: "", descripcion: "" },
     });
 
     function onSubmit(producto){ 
-        functRegistrarProducto(producto);
+        functRegistrarProducto.mutate(producto);
         reset();
     }
 
@@ -38,7 +39,7 @@ export default function FormularioRegistrar({functRegistrarProducto}){
       <label>Descripción <input {...register("descripcion")} /></label>
       {errors.descripcion && <p className="error">{errors.descripcion.message}</p>}
 
-      <button disabled={isSubmitting}>{isSubmitting ? "Registrando…" : "Crear producto"}</button>
+      <button disabled={isSubmitting}>Crear producto</button>
     </form>
   )
 }
